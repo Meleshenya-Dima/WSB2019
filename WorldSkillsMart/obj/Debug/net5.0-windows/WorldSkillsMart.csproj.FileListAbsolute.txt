@@ -25,3 +25,6 @@ C:\Users\meles\Desktop\WorldSkillsMart\WorldSkillsMart\obj\Debug\net5.0-windows\
 C:\Users\meles\Desktop\WorldSkillsMart\WorldSkillsMart\obj\Debug\net5.0-windows\WorldSkillsMart.genruntimeconfig.cache
 C:\Users\meles\Desktop\WorldSkillsMart\WorldSkillsMart\obj\Debug\net5.0-windows\WorldSkillsMart.View.Register.resources
 C:\Users\meles\Desktop\WorldSkillsMart\WorldSkillsMart\obj\Debug\net5.0-windows\WorldSkillsMart.View.UpdateClientPassword.resources
+C:\Users\meles\Desktop\WorldSkillsMart\WorldSkillsMart\obj\Debug\net5.0-windows\WorldSkillsMart.View.AdministratorPanel.resources
+C:\Users\meles\Desktop\WorldSkillsMart\WorldSkillsMart\obj\Debug\net5.0-windows\WorldSkillsMart.View.ForumPage.resources
+C:\Users\meles\Desktop\WorldSkillsMart\WorldSkillsMart\obj\Debug\net5.0-windows\WorldSkillsMart.View.UserInformationManager.resources

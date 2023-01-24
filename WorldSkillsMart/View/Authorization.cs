@@ -50,7 +50,7 @@ namespace WorldSkillsMart
             }
             set
             {
-                IsUpdate = value;
+                _isUpdate = value;
             }
         }
 
@@ -64,23 +64,34 @@ namespace WorldSkillsMart
             if (reader.Read())
             {
 
-                StaticClientInformation.Client = new Client { ID = int.Parse(reader.GetValue(0).ToString()), Role = reader.GetValue(1).ToString(), Login = reader.GetValue(2).ToString(), Password = reader.GetValue(3).ToString(), LastOnline = DateTime.Parse(reader.GetValue(4).ToString()), LastPasswordUpdate = DateTime.Parse(reader.GetValue(5).ToString()) };
-                if ((DateTime.Now - StaticClientInformation.Client.LastOnline).TotalDays >= 30)
+                StaticClientInformation.Client = new Client { ID = int.Parse(reader.GetValue(0).ToString()), Role = reader.GetValue(1).ToString(), Login = reader.GetValue(2).ToString(), Password = reader.GetValue(3).ToString(), LastOnline = DateTime.Parse(reader.GetValue(4).ToString()), LastPasswordUpdate = DateTime.Parse(reader.GetValue(5).ToString()), Confirmed = bool.Parse(reader.GetValue(6).ToString()) };
+                if (StaticClientInformation.Client.Confirmed)
                 {
-                    reader.Close();
-                    MessageBox.Show("Аккаунт был забанен из-за количества дней вашего отсутсвия, а именно более 30!");
-                }
-                else if ((DateTime.Now - StaticClientInformation.Client.LastPasswordUpdate).TotalDays >= 14)
-                {
-                    reader.Close();
-                    UpdateClientPassword updateClientPassword = new UpdateClientPassword();
-                    updateClientPassword.ShowDialog();
+                    if ((DateTime.Now - StaticClientInformation.Client.LastOnline).TotalDays < 30)
+                    {
+                        if ((DateTime.Now - StaticClientInformation.Client.LastPasswordUpdate).TotalDays < 14)
+                        {
+                            reader.Close();
+                            DatabaseManager.SqlCommand.CommandText = $"UPDATE Client SET LastOnline = '{DateTime.Now:MM/dd/yyyy}' WHERE ID = {StaticClientInformation.Client.ID}";
+                            DatabaseManager.SqlCommand.ExecuteNonQuery();
+                            IsUpdate = true;
+                        }
+                        else
+                        {
+                            reader.Close();
+                            UpdateClientPassword updateClientPassword = new UpdateClientPassword();
+                            updateClientPassword.ShowDialog();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Аккаунт был забанен из-за количества дней вашего отсутсвия, а именно более 30!");
+                        reader.Close();
+                    }
                 }
                 else
                 {
-                    DatabaseManager.SqlCommand.CommandText = $"UPDATE Client SET LastOnline = '{DateTime.Now:MM/dd/yyyy}' WHERE ID = {StaticClientInformation.Client.ID}";
-                    DatabaseManager.SqlCommand.ExecuteNonQuery();
-                    IsUpdate = true;
+                    MessageBox.Show("У вас нет доступа на форум, пожалуйста дождитесь пока администратор одобрит вашу заявку");
                 }
             }
             else
@@ -92,15 +103,12 @@ namespace WorldSkillsMart
 
             if (IsUpdate)
             {
-                if (StaticClientInformation.Client.Role == "User")
-                {
-
-                }
-                else
-                {
-
-                }
+                ForumPage forumPage = new ForumPage();
+                this.Hide();
+                forumPage.ShowDialog();
+                this.Show();
             }
+            IsUpdate = false;  
         }
 
         private void TimerTick(object sender, EventArgs e)

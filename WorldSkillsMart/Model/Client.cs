@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WorldSkillsMart.Model
 {
-    class Client
+    public class Client
     {
         public int ID { get; set; }
 
@@ -19,5 +19,7 @@ namespace WorldSkillsMart.Model
         public DateTime LastOnline { get; set; }
 
         public DateTime LastPasswordUpdate { get; set; }
+
+        public bool Confirmed { get; set; }
     }
 }
