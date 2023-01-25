@@ -120,6 +120,7 @@ namespace WorldSkillsMart.View
             this.Controls.Add(this.NewPasswordText);
             this.Controls.Add(this.PasswordTextNow);
             this.Name = "UpdateClientPassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateClientPassword";
             this.ResumeLayout(false);
             this.PerformLayout();

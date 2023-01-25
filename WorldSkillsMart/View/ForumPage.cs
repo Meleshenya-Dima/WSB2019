@@ -16,7 +16,7 @@ namespace WorldSkillsMart.View
 
         private void AdminPanelButtonClick(object sender, System.EventArgs e)
         {
-            UserInformationManager administratorPanel = new UserInformationManager();
+            AdministratorPanel administratorPanel = new AdministratorPanel();
             this.Hide();
             administratorPanel.ShowDialog();
             this.Show();

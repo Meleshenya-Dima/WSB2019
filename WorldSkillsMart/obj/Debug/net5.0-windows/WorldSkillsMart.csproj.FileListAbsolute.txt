@@ -28,3 +28,4 @@ C:\Users\meles\Desktop\WorldSkillsMart\WorldSkillsMart\obj\Debug\net5.0-windows\
 C:\Users\meles\Desktop\WorldSkillsMart\WorldSkillsMart\obj\Debug\net5.0-windows\WorldSkillsMart.View.AdministratorPanel.resources
 C:\Users\meles\Desktop\WorldSkillsMart\WorldSkillsMart\obj\Debug\net5.0-windows\WorldSkillsMart.View.ForumPage.resources
 C:\Users\meles\Desktop\WorldSkillsMart\WorldSkillsMart\obj\Debug\net5.0-windows\WorldSkillsMart.View.UserInformationManager.resources
+C:\Users\meles\Desktop\WorldSkillsMart\WorldSkillsMart\obj\Debug\net5.0-windows\WorldSkillsMart.View.ProductionManagement.resources

@@ -16,5 +16,21 @@ namespace WorldSkillsMart.View
         {
             InitializeComponent();
         }
+
+        private void UserManagerButtonClick(object sender, EventArgs e)
+        {
+            UserInformationManager userInformationManager = new UserInformationManager();
+            this.Hide();
+            userInformationManager.ShowDialog();
+            this.Show();
+        }
+
+        private void ProductManagerButtonClick(object sender, EventArgs e)
+        {
+            ProductionManagement productionManagement = new ProductionManagement();
+            this.Hide();
+            productionManagement.ShowDialog();
+            this.Show();
+        }
     }
 }

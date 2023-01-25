@@ -50,6 +50,7 @@ namespace WorldSkillsMart.View
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.AdminPanelButton);
             this.Name = "ForumPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ForumPage";
             this.ResumeLayout(false);
 
