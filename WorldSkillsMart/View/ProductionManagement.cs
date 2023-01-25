@@ -234,5 +234,17 @@ namespace WorldSkillsMart.View
                 }
             }
         }
+
+        private void UpdateOrderButtonClick(object sender, System.EventArgs e)
+        {
+            int percentages = int.Parse(UpdateOrder.Text);
+
+            DatabaseManager.SqlCommand.CommandText = $"UPDATE Accessory SET Price = Price + Price * {percentages/100}";
+            DatabaseManager.SqlCommand.ExecuteNonQuery();
+            DatabaseManager.SqlCommand.CommandText = $"UPDATE Boat SET BasePrice = BasePrice + BasePrice * {percentages / 100}";
+            DatabaseManager.SqlCommand.ExecuteNonQuery();
+            TakeProduction();
+            dataGridView.DataSource = AccessoryProduct;
+        }
     }
 }

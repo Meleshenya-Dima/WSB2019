@@ -56,6 +56,10 @@ namespace WorldSkillsMart.View
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.UpdateOrder = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -277,11 +281,50 @@ namespace WorldSkillsMart.View
             this.textBox16.Size = new System.Drawing.Size(125, 27);
             this.textBox16.TabIndex = 25;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(30, 96);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(150, 20);
+            this.label4.TabIndex = 35;
+            this.label4.Text = "Поднять цену всего:";
+            // 
+            // UpdateOrder
+            // 
+            this.UpdateOrder.Location = new System.Drawing.Point(30, 119);
+            this.UpdateOrder.Name = "UpdateOrder";
+            this.UpdateOrder.Size = new System.Drawing.Size(59, 27);
+            this.UpdateOrder.TabIndex = 36;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(90, 122);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(21, 20);
+            this.label5.TabIndex = 37;
+            this.label5.Text = "%";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(30, 152);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(80, 29);
+            this.button4.TabIndex = 38;
+            this.button4.Text = "Поднять";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.UpdateOrderButtonClick);
+            // 
             // ProductionManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 448);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.UpdateOrder);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox9);
@@ -346,5 +389,9 @@ namespace WorldSkillsMart.View
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox UpdateOrder;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button4;
     }
 }
