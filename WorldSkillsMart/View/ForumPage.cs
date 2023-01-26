@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Diagnostics;
+using System.Windows.Forms;
 using WorldSkillsMart.ViewModel;
 
 namespace WorldSkillsMart.View
@@ -20,6 +21,18 @@ namespace WorldSkillsMart.View
             this.Hide();
             administratorPanel.ShowDialog();
             this.Show();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //ProcessStartInfo sInfo = new ProcessStartInfo("https://github.com/Meleshenya-Dima");
+            //Process.Start(sInfo);
+        }
+
+        private void StartBuyButtonClick(object sender, System.EventArgs e)
+        {
+            StartBuy startBuy = new StartBuy();
+            startBuy.ShowDialog();
         }
     }
 }

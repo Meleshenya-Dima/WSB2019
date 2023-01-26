@@ -7,6 +7,9 @@
     <Compile Update="View\Authorization.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\BoatBuyPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\ForumPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -14,6 +17,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\StartBuy.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\UpdateClientPassword.cs">
