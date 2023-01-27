@@ -30,16 +30,8 @@ namespace WorldSkillsMart.View
                 else
                 {
                     reader.Close();
-                    DatabaseManager.SqlCommand.CommandText = $"INSERT INTO [Client] (Role, Login, Password, LastOnline, LastPasswordUpdate) VALUES ('User', '{loginUser}', '{passwordUser}', '{DateTime.Now:MM/dd/yyyy}', '{DateTime.Now:MM/dd/yyyy}')";
-                    int isAdd = DatabaseManager.SqlCommand.ExecuteNonQuery();
-                    if (isAdd == 1)
-                    {
-                        MessageBox.Show("Пользователь добавлен!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Вы ввели неверный логин или пароль. Пожалуйста проверьте ещё раз введенные данные");
-                    }
+                    CustomerCreate customerCreate = new CustomerCreate(loginUser, passwordUser);
+                    customerCreate.ShowDialog();
                 }
             }
         }

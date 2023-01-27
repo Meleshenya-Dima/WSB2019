@@ -4,16 +4,16 @@ namespace WorldSkillsMart.ViewModel
 {
     static class StaticClientInformation
     {
-        private static Client client;
+        private static Client _client;
         public static Client Client
         {
             get
             {
-                return client;
+                return _client;
             }
             set
             {
-                client = value;
+                _client = value;
             }
         }
     }

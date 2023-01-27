@@ -31,3 +31,4 @@ C:\Users\meles\Desktop\WorldSkillsMart\WorldSkillsMart\obj\Debug\net5.0-windows\
 C:\Users\meles\Desktop\WorldSkillsMart\WorldSkillsMart\obj\Debug\net5.0-windows\WorldSkillsMart.View.ProductionManagement.resources
 C:\Users\meles\Desktop\WorldSkillsMart\WorldSkillsMart\obj\Debug\net5.0-windows\WorldSkillsMart.View.BoatBuyPage.resources
 C:\Users\meles\Desktop\WorldSkillsMart\WorldSkillsMart\obj\Debug\net5.0-windows\WorldSkillsMart.View.StartBuy.resources
+C:\Users\meles\Desktop\WorldSkillsMart\WorldSkillsMart\obj\Debug\net5.0-windows\WorldSkillsMart.View.CustomerCreate.resources

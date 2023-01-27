@@ -63,7 +63,6 @@ namespace WorldSkillsMart
             SqlDataReader reader = DatabaseManager.SqlCommand.ExecuteReader();
             if (reader.Read())
             {
-
                 StaticClientInformation.Client = new Client { ID = int.Parse(reader.GetValue(0).ToString()), Role = reader.GetValue(1).ToString(), Login = reader.GetValue(2).ToString(), Password = reader.GetValue(3).ToString(), LastOnline = DateTime.Parse(reader.GetValue(4).ToString()), LastPasswordUpdate = DateTime.Parse(reader.GetValue(5).ToString()), Confirmed = bool.Parse(reader.GetValue(6).ToString()) };
                 if (StaticClientInformation.Client.Confirmed)
                 {

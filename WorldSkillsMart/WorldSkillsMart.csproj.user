@@ -10,6 +10,9 @@
     <Compile Update="View\BoatBuyPage.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\CustomerCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\ForumPage.cs">
       <SubType>Form</SubType>
     </Compile>
